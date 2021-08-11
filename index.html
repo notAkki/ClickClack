@@ -71,7 +71,7 @@
         style="
           display: inline-block;
           width: 0px;
-          margin-left: 100px;
+          margin-left: 80px;
           color: rgb(78, 78, 78);
         "
       >
@@ -111,8 +111,15 @@
     </div>
 
     <!-- --------------------------------- Modal --------------------------------- -->
-    <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      data-keyboard="false"
+      data-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Results</h5>
@@ -130,7 +137,13 @@
             <p style="display: inline">CPS</p>
           </div>
           <div class="modal-footer">
-            <a class="btn btn-dark" href="/" role="button">Try again...</a>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Try again...
+            </button>
           </div>
         </div>
       </div>
