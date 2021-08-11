@@ -7,6 +7,7 @@ let count = origCount; //Time Remaining
 let clicks = 0; //Clicks done
 let clicksDone = "___"; //Output for clicks done
 
+let cps = "___";
 let upTime = 0;
 
 let timerHelper; //Setinterval method for the timer
@@ -14,7 +15,7 @@ let cpsHelper;
 
 document.getElementById("timer").innerHTML = count; //Accessor for timer
 document.getElementById("clicks").innerHTML = clicksDone; //Accessor for clicks
-document.getElementById("cps").innerHtml = "___"; //Accessor for cps
+document.getElementById("cps").innerHTML = cps; //Accessor for cps
 
 //Timer runs down to 0 from origCount with if statement to determine when to end the test
 function timer() {
@@ -27,7 +28,8 @@ function timer() {
 
 function getCps() {
   upTime += 0.01;
-  document.getElementById("cps").innerHTML = (clicks / upTime).toFixed(2);
+  cps = (clicks / upTime).toFixed(2);
+  document.getElementById("cps").innerHTML = cps;
 }
 
 //This begins the test after button press. It sets the switch, clicks, and begins the timer
@@ -43,16 +45,20 @@ function start() {
 
 //When the timer reaches 0, resets all the value, prepares all the data, and runs the modal
 function end() {
+  document.getElementById("finalCPS").innerHTML = clicks / origCount;
+
   clearInterval(timerHelper);
   clearInterval(cpsHelper);
   clicksDone = "___";
   count = origCount;
+  upTime = 0;
   started = false;
+  cps = "___";
 
   //Accessors for final data
   document.getElementById("timer").innerHTML = count;
   document.getElementById("clicks").innerHTML = clicksDone;
-  document.getElementById("cps").innerHTML = clicks / origCount;
+  document.getElementById("cps").innerHTML = cps;
 
   clicks = 0;
 
