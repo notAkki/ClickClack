@@ -71,7 +71,7 @@
         style="
           display: inline-block;
           width: 0px;
-          margin-left: 80px;
+          margin-left: 100px;
           color: rgb(78, 78, 78);
         "
       >
@@ -132,9 +132,26 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body" display="flex">
-            <p id="finalCPS" style="display: inline"></p>
-            <p style="display: inline">CPS</p>
+          <div class="modal-body">
+            <div>
+              <b id="finalCPS" style="display: inline; font-size: 42px"></b>
+              <p
+                style="
+                  display: inline;
+                  font-size: 20px;
+                  color: rgb(78, 78, 78);
+                  margin-left: 15px;
+                "
+              >
+                CPS
+              </p>
+            </div>
+            <div style="font-size: 20px">
+              <b id="finalClicks" style="display: inline"></b>
+              <p style="display: inline">clicks in</p>
+              <b id="doneTime" style="display: inline"></b>
+              <p style="display: inline">secs</p>
+            </div>
           </div>
           <div class="modal-footer">
             <button

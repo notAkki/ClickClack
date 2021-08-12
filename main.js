@@ -1,13 +1,13 @@
 //Global Variables
 let started = false; //Switch to check if the test has begun or not
 
-let origCount = 10; //Overall test time
+let origCount = 5; //Overall test time
 let count = origCount; //Time Remaining
 
 let clicks = 0; //Clicks done
 let clicksDone = "___"; //Output for clicks done
 
-let cps = "___";
+let cps = "____";
 let upTime = 0;
 
 let timerHelper; //Setinterval method for the timer
@@ -45,7 +45,11 @@ function start() {
 
 //When the timer reaches 0, resets all the value, prepares all the data, and runs the modal
 function end() {
-  document.getElementById("finalCPS").innerHTML = clicks / origCount;
+  document.getElementById("finalCPS").innerHTML = (clicks / origCount).toFixed(
+    2
+  );
+  document.getElementById("finalClicks").innerHTML = clicks;
+  document.getElementById("doneTime").innerHTML = origCount;
 
   clearInterval(timerHelper);
   clearInterval(cpsHelper);
@@ -53,7 +57,7 @@ function end() {
   count = origCount;
   upTime = 0;
   started = false;
-  cps = "___";
+  cps = "____";
 
   //Accessors for final data
   document.getElementById("timer").innerHTML = count;
