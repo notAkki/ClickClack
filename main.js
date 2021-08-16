@@ -1,7 +1,7 @@
 //Global Variables
 let started = false; //Switch to check if the test has begun or not
 
-let origCount = 5; //Overall test time
+let origCount = 10; //Overall test time
 let count = origCount; //Time Remaining
 
 let clicks = 0; //Clicks done
@@ -67,7 +67,7 @@ function end() {
   clicks = 0;
 
   //runs modal using jQuery
-  $("#exampleModal").modal();
+  $("#resultsModal").modal();
 }
 
 //Checks for button press and checks the switch. If the test is started, then it only increments
@@ -80,4 +80,29 @@ document.getElementById("button").onclick = function () {
   } else {
     start();
   }
+};
+
+// Sets the test time depending on what button the user presses in the time selector modal
+document.getElementById("1sec").onclick = function () {
+  origCount = 1;
+  count = origCount;
+  document.getElementById("timer").innerHTML = count; //Accessor for timer
+};
+
+document.getElementById("5sec").onclick = function () {
+  origCount = 5;
+  count = origCount;
+  document.getElementById("timer").innerHTML = count; //Accessor for timer
+};
+
+document.getElementById("10sec").onclick = function () {
+  origCount = 10;
+  count = origCount;
+  document.getElementById("timer").innerHTML = count; //Accessor for timer
+};
+
+document.getElementById("60sec").onclick = function () {
+  origCount = 60;
+  count = origCount;
+  document.getElementById("timer").innerHTML = count; //Accessor for timer
 };
