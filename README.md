@@ -4,6 +4,7 @@ A simple, minimalistic, distraction-free CPS test. Nothing but the bare necessit
 # Features:
 - View a timer countdown, current cps, and clicks as you do the test
 - Simple results dropdown with no extra pieces
+- Slect between 4 different test times, 1 sec, 5 sec, 10 sec, and 60 sec
 
 # Todo:
 - Add a button for custom timers
