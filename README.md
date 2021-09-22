@@ -1,5 +1,5 @@
 # ClickClack
-A simple, minimalistic, distraction-free CPS test. Nothing but the bare necessities.
+A simple, minimalistic, distraction-free CPS test. Nothing but what you need.
 
 # Features:
 - View a timer countdown, current cps, and clicks as you do the test
