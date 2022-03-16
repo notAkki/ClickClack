@@ -9,5 +9,6 @@ A simple, minimalistic, distraction-free CPS test. That's all it is :)
 # Todo:
 - Add a button for custom times
 - Add a graph on the results dropdown showing the progression of the clicking speed
+- Add dark mode
 
 ###### Thanks to [BattleMage0231](https://github.com/BattleMage0231) for helping me with this project
